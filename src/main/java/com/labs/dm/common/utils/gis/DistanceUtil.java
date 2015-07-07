@@ -8,6 +8,13 @@ package com.labs.dm.common.utils.gis;
  */
 public class DistanceUtil {
 
+    /**
+     * Return distance between src and dest in kilometers
+     *
+     * @param src
+     * @param dest
+     * @return
+     */
     public static double calculateDistance(Position src, Position dest) {
 
         double latDistance = Math.toRadians(src.getLatitude() - dest.getLatitude());

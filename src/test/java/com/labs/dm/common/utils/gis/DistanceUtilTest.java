@@ -22,4 +22,16 @@ public class DistanceUtilTest {
         //THEN
         assertEquals(0d, result, 0d);
     }
+
+    @Test
+    public void shouldResultTheSameValueBothSide() {
+        //GIVEN
+        Position pos1 = new Position(50, 20);
+        Position pos2 = new Position(60, 10);
+        //WHEN
+        double result1 = DistanceUtil.calculateDistance(pos1, pos2);
+        double result2 = DistanceUtil.calculateDistance(pos2, pos1);
+        //THEN
+        assertEquals(result1, result2, 0d);
+    }
 }
